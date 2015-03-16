@@ -18,9 +18,11 @@ it, simply add the following line to your Podfile:
 
     pod "HLRaiseToTalk"
 
-## Author
+## Authors
 
-Michael Kuck, me@michael-kuck.com
+Ken Kuan, kenkuan@hooloop.com
+
+Michael Kuck, michaelkuck@hooloop.com
 
 ## License
 
