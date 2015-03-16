@@ -1,0 +1,14 @@
+PODS:
+  - HLRaiseToTalk (0.1.0)
+
+DEPENDENCIES:
+  - HLRaiseToTalk (from `../`)
+
+EXTERNAL SOURCES:
+  HLRaiseToTalk:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HLRaiseToTalk: 5cd152066b6402d55231c69552685fdbe3c1f1cb
+
+COCOAPODS: 0.36.0

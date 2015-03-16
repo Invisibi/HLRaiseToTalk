@@ -7,23 +7,49 @@
 //
 
 #import "HLViewController.h"
-
-@interface HLViewController ()
-
-@end
+#import "HLMotionSensor.h"
+#import "HLRaiseToTalkSensor.h"
 
 @implementation HLViewController
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        HLMotionSensor *const motionSensor = [[HLMotionSensor alloc] init];
+        _raiseToTalkSensor = [[HLRaiseToTalkSensor alloc] initWithDevice:[UIDevice currentDevice]
+                motionSensor:motionSensor];
+
+        [[NSNotificationCenter defaultCenter]
+                addObserver:self selector:@selector(raiseToTalkStateDidChange:)
+                name:HLRaiseToTalkStateDidChangeNotification
+                object:self.raiseToTalkSensor];
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    if (self.raiseToTalkSensor.hasProximitySensor) {
+        self.raiseToTalkSensor.enabled = YES;
+    } else {
+        NSLog(@"Device does not support proximity detection.");
+    }
 }
 
-- (void)didReceiveMemoryWarning
+- (void)raiseToTalkStateDidChange:(NSNotification *)notification
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if ([notification.userInfo[HLRaiseToTalkStateDidChangeNotificationStateKey] boolValue]) {
+        NSLog(@"Phone was raised to talk.");
+    } else {
+        NSLog(@"Phone was put back down.");
+    }
 }
 
 @end

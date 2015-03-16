@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class HLRaiseToTalkSensor;
+
 @interface HLViewController : UIViewController
 
+@property (nonatomic, readonly) HLRaiseToTalkSensor *raiseToTalkSensor;
 @end

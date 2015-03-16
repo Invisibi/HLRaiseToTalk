@@ -10,19 +10,12 @@
 Pod::Spec.new do |s|
   s.name             = "HLRaiseToTalk"
   s.version          = "0.1.0"
-  s.summary          = "A short description of HLRaiseToTalk."
-  s.description      = <<-DESC
-                       An optional longer description of HLRaiseToTalk
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/HLRaiseToTalk"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.summary          = "Implement a Raise-To-Talk behavior using motion and proximity detectors"
+  #s.description      =
+  s.homepage         = "https://github.com/Invisibi/HLRaiseToTalk"
   s.license          = 'MIT'
-  s.author           = { "Michael Kuck" => "me@michael-kuck.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/HLRaiseToTalk.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Michael Kuck" => "michaelkuck@hooloop.com" }
+  s.source           = { :git => "https://github.com/Invisibi/HLRaiseToTalk.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -32,7 +25,7 @@ Pod::Spec.new do |s|
     'HLRaiseToTalk' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'Foundation', 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

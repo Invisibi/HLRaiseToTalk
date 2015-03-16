@@ -1,0 +1,1 @@
+PODS_HLRAISETOTALK_HLRAISETOTALK_OTHER_LDFLAGS = -framework "Foundation" -framework "UIKit"
