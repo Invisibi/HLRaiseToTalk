@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'HLRaiseToTalk', :exclusive => true do
+  pod "HLRaiseToTalk", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "HLRaiseToTalk", :path => "../"
+
+  
+end
