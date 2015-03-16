@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/HLRaiseToTalk.svg?style=flat)](http://cocoadocs.org/docsets/HLRaiseToTalk)
 [![Platform](https://img.shields.io/cocoapods/p/HLRaiseToTalk.svg?style=flat)](http://cocoadocs.org/docsets/HLRaiseToTalk)
 
+Add a Raise-To-Talk gesture detection  to your app based on smart monitoring of the device's proximity and motion sensor. Supports notifications if a raise-to-talk gesture was detected.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
