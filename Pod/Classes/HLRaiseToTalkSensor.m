@@ -54,7 +54,7 @@ static const CGFloat kIVProximityAccelerationThreshold = 0.11f;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (BOOL)state
+- (BOOL)isRaisedToTalk
 {
     return self.device.proximityState;
 }
