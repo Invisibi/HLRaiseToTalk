@@ -11,7 +11,13 @@ Pod::Spec.new do |s|
   s.name             = "HLRaiseToTalk"
   s.version          = "0.1.0"
   s.summary          = "Implement a Raise-To-Talk behavior using motion and proximity detectors"
-  s.description      = Add a Raise-To-Talk gesture detection  to your app based on smart monitoring of the device's proximity and motion sensor. Supports notifications if a raise-to-talk gesture was detected.
+  s.description      = <<-DESC
+                        Raise-To-Talk gesture detection based on smart monitoring of:
+                        - proximity sensor
+                        - motion sensor.
+
+                        Supports notifications if a raise-to-talk gesture was detected.
+                        DESC
   s.homepage         = "https://github.com/Invisibi/HLRaiseToTalk"
   s.license          = 'MIT'
   s.author           = { "Michael Kuck" => "michaelkuck@hooloop.com" }
