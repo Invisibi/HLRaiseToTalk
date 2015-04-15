@@ -17,6 +17,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         HLMotionSensor *const motionSensor = [[HLMotionSensor alloc] init];
+        [motionSensor enable];
         _raiseToTalkSensor = [[HLRaiseToTalkSensor alloc] initWithDevice:[UIDevice currentDevice]
                 motionSensor:motionSensor];
 

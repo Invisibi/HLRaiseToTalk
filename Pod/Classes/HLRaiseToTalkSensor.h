@@ -15,7 +15,7 @@ extern NSString *const HLRaiseToTalkStateDidChangeNotificationStateKey;
 
 @interface HLRaiseToTalkSensor : NSObject
 
-@property (nonatomic, readonly) BOOL state;
+@property (nonatomic, readonly) BOOL isRaisedToTalk;
 @property (nonatomic, readonly) BOOL hasProximitySensor;
 
 @property (nonatomic) BOOL enabled;

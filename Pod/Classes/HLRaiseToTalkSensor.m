@@ -54,7 +54,7 @@ static const CGFloat kIVProximityAccelerationThreshold = 0.11f;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (BOOL)state
+- (BOOL)isRaisedToTalk
 {
     return self.device.proximityState;
 }
@@ -74,7 +74,6 @@ static const CGFloat kIVProximityAccelerationThreshold = 0.11f;
             [self stopDisableProximitySensorTimer];
             if (!self.device.proximityMonitoringEnabled) {
                 self.device.proximityMonitoringEnabled = YES;
-                NSLog(@"RaiseToTalk monitoring enabled");
             }
         } else {
             [self startDisableProximitySensorTimer];
