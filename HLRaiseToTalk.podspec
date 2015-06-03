@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "HLRaiseToTalk"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "Implement a Raise-To-Talk behavior using motion and proximity detectors"
   s.description      = <<-DESC
                         Raise-To-Talk gesture detection based on smart monitoring of:

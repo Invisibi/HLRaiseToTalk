@@ -24,6 +24,7 @@ static const CGFloat kIVProximityAccelerationThreshold = 0.11f;
 @property (nonatomic) NSTimer *changeStateTimer;
 @property (nonatomic) double avgRotationRate;
 @property (nonatomic) double avgAcceleration;
+@property (nonatomic) HLMotionSensor *motionSensor;
 
 @end
 
@@ -43,12 +44,14 @@ static const CGFloat kIVProximityAccelerationThreshold = 0.11f;
         [[NSNotificationCenter defaultCenter]
                 addObserver:self selector:@selector(motionSensorValueUpdate:) name:kHLMotionSensorUpdateNotification
                 object:motionSensor];
+        self.motionSensor = motionSensor;
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [self.motionSensor disable];
     [self stopDisableProximitySensorTimer];
     self.device.proximityMonitoringEnabled = NO;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
