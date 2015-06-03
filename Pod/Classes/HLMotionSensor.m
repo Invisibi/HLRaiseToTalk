@@ -76,8 +76,10 @@ double correctNegativeZero(double value);
 
 - (void)disable
 {
-    [self.motionManager stopDeviceMotionUpdates];
-    NSLog(@"Motion sensor disabled");
+    dispatch_sync(self.serialQueue, ^{
+        [self.motionManager stopDeviceMotionUpdates];
+        NSLog(@"Motion sensor disabled");
+    });
 }
 
 - (BOOL)available
